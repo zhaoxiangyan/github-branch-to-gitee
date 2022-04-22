@@ -35,5 +35,5 @@ runs:
         git remote add gitee https://${{ inputs.username }}:${{ inputs.password }}@gitee.com/${{ inputs.gitee_repo }}.git
         git show-ref
         git branch --verbose
-        git push gitee ${{ inputs.github_branch }}:${{ inputs.gitee_branch }}
+        git push -f gitee ${{ inputs.github_branch }}:${{ inputs.gitee_branch }}
       shell: bash
